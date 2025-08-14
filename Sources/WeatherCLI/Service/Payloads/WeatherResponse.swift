@@ -1,6 +1,6 @@
 import Foundation
 
-struct WeatherResponse: Decodable {
+struct WeatherData: Decodable {
     private let currentCondition: [CurrentCondition]
     private let nearestArea: [NearestArea]
     private let request: [Request]
@@ -17,10 +17,10 @@ struct WeatherResponse: Decodable {
     }
 
     var city: String {
-        nearestArea.first?.region.first?.value ?? ""
+        nearestArea.first?.areaName.first?.value ?? ""
     }
 
-    var temp: String {
+    var temperature: String {
         currentCondition.first?.tempC ?? ""
     }
 }
