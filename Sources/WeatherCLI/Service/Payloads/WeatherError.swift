@@ -3,4 +3,6 @@ enum WeatherError: Error {
     case errorWithURL
     case localError
     case serverError
+    case dataError
+    case failedDecodeError
 }
