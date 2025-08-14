@@ -7,8 +7,8 @@ protocol WeatherBusinessLogicType {
 final class WeatherBusinessLogic: WeatherBusinessLogicType {
     let service: WeatherServiceType
 
-    init() { 
-        self.service = WeatherService()
+    init(service: WeatherServiceType) { 
+        self.service = service
     }
 
     func getWeather(from location: String) async throws -> WeatherModel? {

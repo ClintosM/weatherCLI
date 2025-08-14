@@ -1,9 +1,13 @@
 import Foundation
 
 private func main() async throws {
-    let userInput = promptUser()
-    let businessLogic = WeatherBusinessLogic()
+    let service: WeatherServiceType = WeatherService() 
+    let businessLogic = WeatherBusinessLogic(service: service)
+
+    // temporary. Should allow for "multiple" models, and to have program persist beyond just one user input
     let model: WeatherModel?
+
+    let userInput = promptUser()
 
     do {
         model = try await businessLogic.getWeather(from: userInput)
