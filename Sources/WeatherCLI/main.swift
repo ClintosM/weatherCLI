@@ -1,5 +1,7 @@
 import Foundation
 
+// TODO: Refactor this entire file. Very temp
+
 private func main() async throws {
     let service: WeatherServiceType = WeatherService() 
     let businessLogic = WeatherBusinessLogic(service: service)
