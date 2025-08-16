@@ -5,13 +5,12 @@ private enum CommandList {
     case help
     case formatResponse
     case multipleRequests
-    case exit
+    case exitProgram
 }
 
 private struct RegexCommandHandler {
     private enum Constants {
         enum Regex {
-            static let commandFlag = "-{2}" // -- 
         }
     }
 }
@@ -21,7 +20,7 @@ final class InputHandler {
 
 }
 
-// Allow for flags "--":
+// TODO: - Allow for flags "--":
 
     // "--json" after location
 
