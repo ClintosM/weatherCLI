@@ -10,6 +10,7 @@ private struct Main {
 
         do {
             try await weatherProgram(service: service, businessLogic: businessLogic)
+            try await main()
         } catch {
             print("\(error)")
         }
